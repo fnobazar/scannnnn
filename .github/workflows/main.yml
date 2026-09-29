@@ -16,7 +16,7 @@ jobs:
       - name: Build APK
         run: |
           flutter pub get
-          flutter create. --platforms=android
+          flutter create . --platforms=android
           flutter build apk --debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
