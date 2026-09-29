@@ -16,12 +16,10 @@ jobs:
       - name: Build APK
         run: |
           flutter pub get
-          if [! -d "android" ]; then
-            flutter create. --platforms=android
-          fi
+          flutter create. --platforms=android --project-name scannnnn
           flutter build apk --debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: scannnnn-APK
-          path: build/app/outputs/flutter-apk/*.apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
